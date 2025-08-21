@@ -34257,7 +34257,7 @@ void main() {
 	float basic2Noise = texture2D(tNoise, uv * 2.5 * vec2(2., 1.)).r;
 	float mouse = clamp(texture2D(tMouse, sUv + 0.1 * vec2(basic2Noise)).r, 0., 1.);
 	
-	/* Fort energy stars */
+	/* PORTFOLIO stars */
 
 	if (fortEnergy == 1.){
 		vec2 starsUv = fract(vUv * 150.); /* First layers of stars */
