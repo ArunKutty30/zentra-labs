@@ -68,6 +68,189 @@
         mix-blend-mode: normal;
       }
     </style>
+    <style>
+      /* Menu visibility and styling */
+      .montfort-menu {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        pointer-events: none;
+        display: none;
+      }
+
+      .montfort-menu.active {
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: all !important;
+        display: block !important;
+      }
+
+      /* Menu button close state */
+      .menu-cta.close .dots-w .dot:nth-child(2) {
+        top: 0 !important;
+        left: 50% !important;
+        transform: translate3d(-50%, -50%, 0) scaleZ(1) !important;
+      }
+
+      .menu-cta.close .dots-w .dot:nth-child(4) {
+        top: 100% !important;
+        left: 50% !important;
+        transform: translate3d(-50%, -50%, 0) scaleZ(1) !important;
+      }
+
+      /* Ensure menu overlay is properly positioned and visible */
+      .montfort-menu.active {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        z-index: 999 !important;
+        background: linear-gradient(
+          120deg,
+          #d8d8d8 -45%,
+          #f6f6f6 25%
+        ) !important;
+      }
+
+      /* Ensure menu content is properly visible when active */
+      .montfort-menu.active .grid-nav,
+      .montfort-menu.active .grid-terms {
+        opacity: 1 !important;
+        visibility: visible !important;
+        position: relative !important;
+        z-index: 1000 !important;
+      }
+
+      /* Hide main content when menu is active */
+      .montfort-menu.active ~ main {
+        visibility: hidden;
+      }
+
+      /* Ensure header stays visible when menu is active */
+      .montfort-menu.active ~ header {
+        z-index: 1000 !important;
+      }
+
+      /* Ensure menu content is visible when active */
+      .montfort-menu.active .grid-nav,
+      .montfort-menu.active .grid-terms {
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+
+      /* Ensure menu navigation items are visible */
+      .montfort-menu.active ul {
+        opacity: 1 !important;
+        visibility: visible !important;
+        position: relative !important;
+        z-index: 1001 !important;
+      }
+
+      .montfort-menu.active li {
+        opacity: 1 !important;
+        visibility: visible !important;
+        position: relative !important;
+        z-index: 1001 !important;
+      }
+
+      .montfort-menu.active a {
+        opacity: 1 !important;
+        visibility: visible !important;
+        color: #2d628c !important;
+        position: relative !important;
+        z-index: 1001 !important;
+      }
+
+      /* Ensure menu header is visible */
+      .montfort-menu.active .menu-header {
+        opacity: 1 !important;
+        visibility: visible !important;
+        position: absolute !important;
+        z-index: 1002 !important;
+      }
+
+      /* Additional menu visibility fixes */
+      .montfort-menu.active * {
+        pointer-events: auto !important;
+      }
+
+      /* Ensure menu background is fully visible */
+      .montfort-menu.active::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(120deg, #d8d8d8 -45%, #f6f6f6 25%);
+        z-index: 998;
+      }
+
+      /* Menu Header Styling */
+      .menu-header {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        z-index: 1000;
+      }
+
+      .menu-header-content {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .menu-header .news-w {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        color: #2d628c;
+        font-family: "Century Gothic", sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+
+      .menu-header .news-w p {
+        margin: 0;
+        font-size: 0.875rem;
+      }
+
+      .menu-header .counter {
+        background: #2d628c;
+        color: #fff;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        font-weight: bold;
+      }
+
+      .menu-close-btn {
+        background: #2d628c;
+        color: #fff;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-family: "Century Gothic", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+
+      .menu-close-btn:hover {
+        background: #8cb4d5;
+        transform: translateY(-1px);
+      }
+    </style>
   </head>
   <body>
     <div
@@ -177,6 +360,25 @@
       data-component="Menu"
       data-astro-cid-6fp6peiy
     >
+      <!-- Menu Header with NEWS and CLOSE -->
+      <div class="menu-header" data-astro-cid-6fp6peiy>
+        <div class="menu-header-content">
+          <a href="/news/" class="news-w" data-astro-cid-6fp6peiy="true">
+            <p data-astro-cid-6fp6peiy>News</p>
+            <div class="counter no-unread" data-astro-cid-6fp6peiy>
+              <span
+                data-total-count="14"
+                class="number"
+                data-astro-cid-6fp6peiy
+              >
+                14
+              </span>
+            </div>
+          </a>
+          <button class="menu-close-btn" data-astro-cid-6fp6peiy>Close</button>
+        </div>
+      </div>
+
       <div class="grid grid-nav" data-astro-cid-6fp6peiy>
         <nav
           class="col-start-1 col-end-5 tb:col-start-2 dk:col-start-5 lg:col-start-6 dk:col-end-14"
@@ -724,7 +926,7 @@
           >
             <div class="top" data-astro-cid-spfovdek>
               <h2 class="fs-s2 uppercase" data-astro-cid-spfovdek>
-                Geneva, Switzerland 
+                Geneva, Switzerland
               </h2>
               <p class="fs-body-s address" data-astro-cid-spfovdek>
                 3rd & 4th floor Rue du Mont-Blanc 14  1201 Geneva, Switzerland
@@ -855,6 +1057,7 @@
       data-cfasync="false"
       src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
     ></script>
+    <script type="module" src="/_astro/GlobalApp.CGTlQdR2.js"></script>
     <script type="module">
       let e = document.querySelector("#footer"),
         o = e.querySelectorAll(".office");
@@ -1302,19 +1505,54 @@
       });
 
       // Menu toggle functionality
-      const menuButton = document.querySelector(".menu-cta");
-      const menu = document.querySelector(".montfort-menu");
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuBtn = document.querySelector(".menu-cta");
+        const menu = document.querySelector(".montfort-menu");
+        const header = document.querySelector("#header");
 
-      menuButton.addEventListener("click", function () {
-        menu.classList.toggle("active");
-        this.classList.toggle("close");
-      });
+        if (menuBtn && menu && header) {
+          menuBtn.addEventListener("click", function () {
+            console.log("Menu button clicked");
+            console.log("Menu element:", menu);
+            console.log("Menu classes before:", menu.className);
 
-      // Close menu when clicking outside
-      document.addEventListener("click", function (e) {
-        if (!menu.contains(e.target) && !menuButton.contains(e.target)) {
-          menu.classList.remove("active");
-          menuButton.classList.remove("close");
+            // Toggle menu visibility
+            menu.classList.toggle("active");
+
+            console.log("Menu classes after:", menu.className);
+            console.log("Menu is active:", menu.classList.contains("active"));
+
+            // Toggle header theme
+            if (menu.classList.contains("active")) {
+              header.dataset.theme = "dark";
+              header.classList.add("menu-open");
+              console.log("Menu opened - header theme set to dark");
+            } else {
+              header.dataset.theme = "dark";
+              header.classList.remove("menu-open");
+              console.log("Menu closed - header theme set to dark");
+            }
+          });
+
+          // Handle menu close button
+          const menuCloseBtn = document.querySelector(".menu-close-btn");
+          if (menuCloseBtn) {
+            menuCloseBtn.addEventListener("click", function () {
+              menu.classList.remove("active");
+              header.dataset.theme = "dark";
+              header.classList.remove("menu-open");
+              console.log("Menu closed via close button");
+            });
+          }
+
+          // Close menu when clicking outside
+          document.addEventListener("click", function (e) {
+            if (!menu.contains(e.target) && !menuBtn.contains(e.target)) {
+              menu.classList.remove("active");
+              header.dataset.theme = "dark";
+              header.classList.remove("menu-open");
+            }
+          });
         }
       });
     </script>
