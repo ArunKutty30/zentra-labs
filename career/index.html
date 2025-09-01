@@ -1057,6 +1057,11 @@
       data-cfasync="false"
       src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
     ></script>
+    <!-- Add EmailJS CDN -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
     <script type="module" src="/_astro/GlobalApp.CGTlQdR2.js"></script>
     <script type="module">
       let e = document.querySelector("#footer"),
@@ -1451,7 +1456,12 @@
     </style>
 
     <script>
-      // Form submission handling
+      // Initialize EmailJS
+      (function () {
+        emailjs.init("z36lj8BNCD9nfhXhk");
+      })();
+
+      // Form submission handling with EmailJS
       document
         .querySelector(".application-form")
         .addEventListener("submit", function (e) {
@@ -1461,16 +1471,63 @@
           const formData = new FormData(this);
           const data = Object.fromEntries(formData);
 
-          // Here you would typically send the data to your backend
-          console.log("Application submitted:", data);
+          // Basic validation
+          if (!data.name || !data.email || !data.position) {
+            alert(
+              "Please fill in all required fields (Name, Email, and Position)"
+            );
+            return;
+          }
 
-          // Show success message
-          alert(
-            "Thank you for your application! We will review it and get back to you soon."
-          );
+          // Show loading state
+          const submitBtn = this.querySelector(".submit-button");
+          const originalText = submitBtn.textContent;
+          submitBtn.textContent = "Sending Application...";
+          submitBtn.disabled = true;
 
-          // Reset form
-          this.reset();
+          // Prepare template parameters
+          const templateParams = {
+            from_name: data.name,
+            from_email: data.email,
+            from_phone: data.phone || "Not provided",
+            from_position: data.position,
+            from_portfolio: data.portfolio || "Not provided",
+            message: data.message || "No additional message provided",
+            to_name: "Zentra Labs HR Team",
+          };
+
+          // Send email using EmailJS
+          emailjs
+            .send(
+              "service_n94wkfg", // Your EmailJS service ID
+              "template_easrk5v", // Your EmailJS template ID
+              templateParams
+            )
+            .then(
+              function (response) {
+                console.log("SUCCESS!", response.status, response.text);
+                alert(
+                  "Thank you for your application! We will review it and get back to you soon."
+                );
+
+                // Reset form
+                document.querySelector(".application-form").reset();
+
+                // Reset submit button
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+              },
+              function (error) {
+                console.log("FAILED...", error);
+                alert(
+                  "Sorry, there was an error sending your application. Please try again."
+                );
+
+                // Reset submit button
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+              }
+            );
         });
 
       // Smooth scrolling for anchor links

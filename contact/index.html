@@ -1422,8 +1422,18 @@
       data-cfasync="false"
       src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
     ></script>
+    <!-- Add EmailJS CDN -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
     <script type="module" src="/_astro/GlobalApp.CGTlQdR2.js"></script>
     <script>
+      // Initialize EmailJS
+      (function () {
+        emailjs.init("z36lj8BNCD9nfhXhk");
+      })();
+
       // Menu toggle functionality
       document.addEventListener("DOMContentLoaded", function () {
         const menuBtn = document.querySelector(".menu-cta");
@@ -1502,10 +1512,11 @@
     </script>
 
     <script>
-      // Contact form functionality
+      // Contact form functionality with EmailJS
       document.addEventListener("DOMContentLoaded", function () {
         const closeBtn = document.querySelector(".close-btn");
         const contactForm = document.querySelector(".contact-form");
+        const submitBtn = document.querySelector(".submit-btn");
 
         // Close button functionality
         closeBtn.addEventListener("click", function () {
@@ -1513,7 +1524,7 @@
           alert("Close button clicked - customize this functionality");
         });
 
-        // Form submission
+        // Form submission with EmailJS
         contactForm.addEventListener("submit", function (e) {
           e.preventDefault();
 
@@ -1533,12 +1544,56 @@
             return;
           }
 
-          // Here you would typically send the data to your server
-          console.log("Form data:", data);
-          alert("Thank you for your message! We will get back to you soon.");
+          // Show loading state
+          submitBtn.textContent = "Sending...";
+          submitBtn.disabled = true;
 
-          // Reset form
-          contactForm.reset();
+          // Prepare template parameters
+          const templateParams = {
+            from_name: data.name,
+            from_position: data.position,
+            from_company: data.company,
+            from_email: data.email,
+            from_telegram: data.telegram || "Not provided",
+            from_social: data.social || "Not provided",
+            from_website: data.website || "Not provided",
+            from_budget: data.budget || "Not specified",
+            message: data.message,
+            to_name: "Zentra Labs Team",
+          };
+
+          // Send email using EmailJS
+          emailjs
+            .send(
+              "service_n94wkfg", // Your EmailJS service ID
+              "template_2xprla8", // Your EmailJS template ID for contact form
+              templateParams
+            )
+            .then(
+              function (response) {
+                console.log("SUCCESS!", response.status, response.text);
+                alert(
+                  "Thank you for your message! We will get back to you soon."
+                );
+
+                // Reset form
+                contactForm.reset();
+
+                // Reset submit button
+                submitBtn.textContent = "Submit";
+                submitBtn.disabled = false;
+              },
+              function (error) {
+                console.log("FAILED...", error);
+                alert(
+                  "Sorry, there was an error sending your message. Please try again."
+                );
+
+                // Reset submit button
+                submitBtn.textContent = "Submit";
+                submitBtn.disabled = false;
+              }
+            );
         });
 
         // Budget radio button styling
