@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en" data-astro-transition-scope="astro-smooz4hq-1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="generator" content="Astro v5.2.6" />
+    <meta
+      name="description"
+      content="Partners - Zentra Labs - Our trusted partners in Web3 innovation"
+    />
+    <meta
+      property="og:description"
+      content="Partners - Zentra Labs - Our trusted partners in Web3 innovation"
+    />
+    <meta
+      name="keywords"
+      content="partners, Web3, blockchain, collaboration, Zentra Labs"
+    />
+    <meta property="og:title" content="Partners | Zentra Labs" />
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" href="/_astro/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="/_astro/favicon.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/_astro/favicon.png" />
+    <meta name="theme-color" content="#2d628c" />
+    <title>Partners | Zentra Labs</title>
+    <meta name="astro-view-transitions-enabled" content="true" />
+    <meta name="astro-view-transitions-fallback" content="swap" />
+    <script
+      type="module"
+      src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.WONxKOw9.js"
+    ></script>
+    <link rel="stylesheet" href="/_astro/_slug_.B97dlsMJ.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      [data-astro-transition-scope="astro-smooz4hq-1"] {
+        view-transition-name: none;
+      }
+      @layer astro {
+        ::view-transition-old(none) {
+          animation: none;
+          opacity: 0;
+          mix-blend-mode: normal;
+        }
+        ::view-transition-new(none) {
+          animation: none;
+          mix-blend-mode: normal;
+        }
+        ::view-transition-group(none) {
+          animation: none;
+        }
+      }
+      [data-astro-transition-fallback="old"]
+        [data-astro-transition-scope="astro-smooz4hq-1"],
+      [data-astro-transition-fallback="old"][data-astro-transition-scope="astro-smooz4hq-1"] {
+        animation: none;
+        mix-blend-mode: normal;
+      }
+      [data-astro-transition-fallback="new"]
+        [data-astro-transition-scope="astro-smooz4hq-1"],
+      [data-astro-transition-fallback="new"][data-astro-transition-scope="astro-smooz4hq-1"] {
+        animation: none;
+        mix-blend-mode: normal;
+      }
+
+      /* Partners Page Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Josefin Sans", sans-serif;
+        background: #fff;
+        min-height: 100vh;
+        color: #2d628c;
+        overflow-x: hidden;
+      }
+
+      .partners-container {
+        min-height: 100vh;
+        padding: 2rem;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      /* Header */
+      .header {
+        text-align: center;
+        margin-bottom: 4rem;
+        padding-top: 2rem;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .logo img {
+        height: 50px;
+        width: auto;
+      }
+
+      .company-name {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #2d628c;
+        letter-spacing: 2px;
+      }
+
+      .page-title {
+        font-size: 3.5rem;
+        font-weight: 600;
+        color: #2d628c;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+      }
+
+      .page-title .highlight {
+        color: #8cb4d5;
+      }
+
+      .page-subtitle {
+        font-size: 1.2rem;
+        color: #666;
+        font-weight: 300;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      /* Partners Container Card */
+      .partners-container-card {
+        background: #fff;
+        border: 2px solid #e0e0e0;
+        border-radius: 16px;
+        padding: 3rem;
+        margin-bottom: 4rem;
+        box-shadow: 0 4px 20px rgba(45, 98, 140, 0.1);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .partners-container-card .moving-row {
+        overflow: hidden;
+      }
+
+      .partners-container-card:hover {
+        border-color: #2d628c;
+        box-shadow: 0 8px 30px rgba(45, 98, 140, 0.2);
+      }
+
+      /* Partners Grid */
+      .partners-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 2rem;
+      }
+
+      /* Moving Row Animation */
+      .moving-row {
+        display: flex;
+        gap: 0;
+        width: max-content;
+        margin-bottom: 2rem;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      .moving-row-1 {
+        animation: moveLeft 15s linear infinite;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+      }
+
+      .moving-row-2 {
+        animation: moveLeft 15s linear infinite;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+      }
+
+      .moving-row-3 {
+        animation: moveLeft 15s linear infinite;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+      }
+
+      .moving-row-4 {
+        animation: moveLeft 15s linear infinite;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+      }
+
+      .moving-row-5 {
+        animation: moveLeft 15s linear infinite;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+      }
+
+      .moving-row-6 {
+        animation: moveLeft 15s linear infinite;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+      }
+
+      .moving-row-7 {
+        animation: moveLeft 15s linear infinite;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+      }
+
+      .moving-row-8 {
+        animation: moveLeft 15s linear infinite;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+      }
+
+      .moving-row-9 {
+        animation: moveLeft 15s linear infinite;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+      }
+
+      .moving-row-10 {
+        animation: moveLeft 15s linear infinite;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+      }
+
+      .moving-row .partner-logo {
+        flex-shrink: 0;
+        width: 150px;
+        height: 80px;
+        will-change: transform;
+        margin-right: 2rem;
+      }
+
+      @keyframes moveLeft {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      @keyframes moveRight {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      .partner-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80px;
+        transition: transform 0.3s ease;
+      }
+
+      .partner-logo img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        transition: filter 0.3s ease;
+      }
+
+      .partner-logo:hover {
+        transform: scale(1.05);
+      }
+
+      .partner-logo:hover img {
+        filter: drop-shadow(0 0 15px rgba(45, 98, 140, 0.4));
+      }
+
+      /* CTA Section */
+      .cta-section {
+        text-align: center;
+        background: #2d628c;
+        border-radius: 16px;
+        padding: 3rem 2rem;
+        color: #fff;
+      }
+
+      .cta-title {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 1rem;
+        font-family: "Josefin Sans", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+
+      .cta-description {
+        font-size: 1.1rem;
+        color: #fff;
+        margin-bottom: 2rem;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: "Josefin Sans", sans-serif;
+        font-weight: 300;
+        line-height: 1.6;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background: #8cb4d5;
+        color: #fff;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+        font-family: "Josefin Sans", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+
+      .cta-button:hover {
+        background: #fff;
+        color: #2d628c;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(45, 98, 140, 0.3);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .partners-container {
+          padding: 1rem;
+        }
+
+        .page-title {
+          font-size: 2.5rem;
+        }
+
+        .partners-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1.5rem;
+        }
+
+        .partners-container-card {
+          padding: 2rem;
+        }
+
+        .cta-section {
+          padding: 2rem 1rem;
+        }
+
+        .cta-title {
+          font-size: 1.5rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .partners-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
+        }
+
+        .page-title {
+          font-size: 2rem;
+        }
+
+        .partners-container-card {
+          padding: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="partners-container">
+      <!-- Header -->
+      <div class="header">
+        <div class="logo">
+          <img src="/assets/images/zentra.png" alt="Zentra Labs" />
+          <div class="company-name">ZENTRA LABS</div>
+        </div>
+        <h1 class="page-title">
+          Take A Look At Our <span class="highlight">Partners</span>
+        </h1>
+        <p class="page-subtitle">
+          Building the future of Web3 together with industry leaders and
+          innovative collaborators
+        </p>
+      </div>
+
+      <!-- Partners Container Card -->
+      <div class="partners-container-card">
+        <!-- Row 1 - Moving Left to Right -->
+        <div class="moving-row moving-row-1">
+          <div class="partner-logo">
+            <img src="/assets/partner/row1-1.jpg" alt="Partner 1" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row1-2.jpg" alt="Partner 2" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row1-3.jpg" alt="Partner 3" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row1-4.jpg" alt="Partner 4" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row1-5.jpg" alt="Partner 5" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row1-6.jpg" alt="Partner 6" />
+          </div>
+          <!-- Duplicate for seamless loop -->
+          <div class="partner-logo">
+            <img src="/assets/partner/row1-1.jpg" alt="Partner 1" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row1-2.jpg" alt="Partner 2" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row1-3.jpg" alt="Partner 3" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row1-4.jpg" alt="Partner 4" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row1-5.jpg" alt="Partner 5" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row1-6.jpg" alt="Partner 6" />
+          </div>
+        </div>
+
+        <!-- Row 2 - Moving Left to Right -->
+        <div class="moving-row moving-row-2">
+          <div class="partner-logo">
+            <img src="/assets/partner/row2-1.jpg" alt="Partner 1" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row2-2.jpg" alt="Partner 2" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row2-3.jpg" alt="Partner 3" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row2-4.jpg" alt="Partner 4" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row2-5.jpg" alt="Partner 5" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row2-6.jpg" alt="Partner 6" />
+          </div>
+          <!-- Duplicate for seamless loop -->
+          <div class="partner-logo">
+            <img src="/assets/partner/row2-1.jpg" alt="Partner 1" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row2-2.jpg" alt="Partner 2" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row2-3.jpg" alt="Partner 3" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row2-4.jpg" alt="Partner 4" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row2-5.jpg" alt="Partner 5" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row2-6.jpg" alt="Partner 6" />
+          </div>
+        </div>
+
+        <!-- Row 3 - Moving Left to Right -->
+        <div class="moving-row moving-row-3">
+          <div class="partner-logo">
+            <img src="/assets/partner/row3-1.jpg" alt="Partner 1" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row3-2.jpg" alt="Partner 2" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row3-3.jpg" alt="Partner 3" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row3-4.jpg" alt="Partner 4" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row3-5.jpg" alt="Partner 5" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row3-6.jpg" alt="Partner 6" />
+          </div>
+          <!-- Duplicate for seamless loop -->
+          <div class="partner-logo">
+            <img src="/assets/partner/row3-1.jpg" alt="Partner 1" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row3-2.jpg" alt="Partner 2" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row3-3.jpg" alt="Partner 3" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row3-4.jpg" alt="Partner 4" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row3-5.jpg" alt="Partner 5" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row3-6.jpg" alt="Partner 6" />
+          </div>
+        </div>
+
+        <!-- Row 4 - Moving Left to Right -->
+        <div class="moving-row moving-row-4">
+          <div class="partner-logo">
+            <img src="/assets/partner/row4-1.jpg" alt="Partner 1" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row4-2.jpg" alt="Partner 2" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row4-3.jpg" alt="Partner 3" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row4-4.jpg" alt="Partner 4" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row4-5.jpg" alt="Partner 5" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row4-6.jpg" alt="Partner 6" />
+          </div>
+          <!-- Duplicate for seamless loop -->
+          <div class="partner-logo">
+            <img src="/assets/partner/row4-1.jpg" alt="Partner 1" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row4-2.jpg" alt="Partner 2" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row4-3.jpg" alt="Partner 3" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row4-4.jpg" alt="Partner 4" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row4-5.jpg" alt="Partner 5" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row4-6.jpg" alt="Partner 6" />
+          </div>
+        </div>
+
+        <!-- Row 5 - Moving Left to Right -->
+        <div class="moving-row moving-row-5">
+          <div class="partner-logo">
+            <img src="/assets/partner/row5-1.jpg" alt="Partner 1" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row5-2.jpg" alt="Partner 2" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row5-3.jpg" alt="Partner 3" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row5-4.jpg" alt="Partner 4" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row5-5.jpg" alt="Partner 5" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row5-6.jpg" alt="Partner 6" />
+          </div>
+          <!-- Duplicate for seamless loop -->
+          <div class="partner-logo">
+            <img src="/assets/partner/row5-1.jpg" alt="Partner 1" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row5-2.jpg" alt="Partner 2" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row5-3.jpg" alt="Partner 3" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row5-4.jpg" alt="Partner 4" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row5-5.jpg" alt="Partner 5" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row5-6.jpg" alt="Partner 6" />
+          </div>
+        </div>
+
+        <!-- Row 6 - Moving Left to Right -->
+        <div class="moving-row moving-row-6">
+          <div class="partner-logo">
+            <img src="/assets/partner/row6-1.jpg" alt="Partner 1" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row6-2.jpg" alt="Partner 2" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row6-3.jpg" alt="Partner 3" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row6-4.jpg" alt="Partner 4" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row6-5.jpg" alt="Partner 5" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row6-6.jpg" alt="Partner 6" />
+          </div>
+          <!-- Duplicate for seamless loop -->
+          <div class="partner-logo">
+            <img src="/assets/partner/row6-1.jpg" alt="Partner 1" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row6-2.jpg" alt="Partner 2" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row6-3.jpg" alt="Partner 3" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row6-4.jpg" alt="Partner 4" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row6-5.jpg" alt="Partner 5" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row6-6.jpg" alt="Partner 6" />
+          </div>
+        </div>
+
+        <!-- Row 7 - Moving Left to Right -->
+        <div class="moving-row moving-row-7">
+          <div class="partner-logo">
+            <img src="/assets/partner/row7-1.jpg" alt="Partner 1" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row7-2.jpg" alt="Partner 2" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row7-3.jpg" alt="Partner 3" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row7-4.jpg" alt="Partner 4" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row7-5.jpg" alt="Partner 5" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row7-6.jpg" alt="Partner 6" />
+          </div>
+          <!-- Duplicate for seamless loop -->
+          <div class="partner-logo">
+            <img src="/assets/partner/row7-1.jpg" alt="Partner 1" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row7-2.jpg" alt="Partner 2" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row7-3.jpg" alt="Partner 3" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row7-4.jpg" alt="Partner 4" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row7-5.jpg" alt="Partner 5" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row7-6.jpg" alt="Partner 6" />
+          </div>
+        </div>
+
+        <!-- Row 8 - Moving Left to Right -->
+        <div class="moving-row moving-row-8">
+          <div class="partner-logo">
+            <img src="/assets/partner/row8-1.jpg" alt="Partner 1" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row8-2.jpg" alt="Partner 2" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row8-3.jpg" alt="Partner 3" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row8-4.jpg" alt="Partner 4" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row8-5.jpg" alt="Partner 5" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row8-6.jpg" alt="Partner 6" />
+          </div>
+          <!-- Duplicate for seamless loop -->
+          <div class="partner-logo">
+            <img src="/assets/partner/row8-1.jpg" alt="Partner 1" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row8-2.jpg" alt="Partner 2" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row8-3.jpg" alt="Partner 3" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row8-4.jpg" alt="Partner 4" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row8-5.jpg" alt="Partner 5" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row8-6.jpg" alt="Partner 6" />
+          </div>
+        </div>
+
+        <!-- Row 9 - Moving Left to Right -->
+        <div class="moving-row moving-row-9">
+          <div class="partner-logo">
+            <img src="/assets/partner/row9-1.jpg" alt="Partner 1" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row9-2.jpg" alt="Partner 2" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row9-3.jpg" alt="Partner 3" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row9-4.jpg" alt="Partner 4" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row9-5.jpg" alt="Partner 5" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row9-6.jpg" alt="Partner 6" />
+          </div>
+          <!-- Duplicate for seamless loop -->
+          <div class="partner-logo">
+            <img src="/assets/partner/row9-1.jpg" alt="Partner 1" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row9-2.jpg" alt="Partner 2" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row9-3.jpg" alt="Partner 3" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row9-4.jpg" alt="Partner 4" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row9-5.jpg" alt="Partner 5" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row9-6.jpg" alt="Partner 6" />
+          </div>
+        </div>
+
+        <!-- Row 10 - Moving Left to Right -->
+        <div class="moving-row moving-row-10">
+          <div class="partner-logo">
+            <img src="/assets/partner/row10-1.jpg" alt="Partner 1" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row10-2.jpg" alt="Partner 2" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row10-3.jpg" alt="Partner 3" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row10-4.jpg" alt="Partner 4" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row10-5.jpg" alt="Partner 5" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row10-6.jpg" alt="Partner 6" />
+          </div>
+          <!-- Duplicate for seamless loop -->
+          <div class="partner-logo">
+            <img src="/assets/partner/row10-1.jpg" alt="Partner 1" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row10-2.jpg" alt="Partner 2" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row10-3.jpg" alt="Partner 3" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row10-4.jpg" alt="Partner 4" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row10-5.jpg" alt="Partner 5" />
+          </div>
+          <div class="partner-logo">
+            <img src="/assets/partner/row10-6.jpg" alt="Partner 6" />
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <div class="cta-section">
+        <h2 class="cta-title">Apply Partnership with Zentra Labs</h2>
+        <p class="cta-description">
+          You can click the button below for the purpose of cooperation between
+          us!!
+        </p>
+        <a href="/contact" class="cta-button">Contact Us</a>
+      </div>
+    </div>
+  </body>
+</html>
